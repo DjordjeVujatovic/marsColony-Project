@@ -1,5 +1,6 @@
 <section class = "register-body">
-<p class = "register">Register</p>
+<p class = "register">Registration Page</p>
+<p class = "instructions">Please Fill Out all Forms</p>
 <form #registerForm = "ngForm" class = "register-form" (ngSubmit)="onSubmit($event, registerForm)"> 
 	<fieldset>
 		<input type="text" placeholder="Name" [(ngModel)]="colonist.name" name = "name" />

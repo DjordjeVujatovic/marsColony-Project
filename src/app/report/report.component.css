@@ -9,7 +9,8 @@ header {
 }
 h1{
     color:darkorange;
-    font-size:2rem;
+    font-size:2.4rem;
+    text-transform: uppercase;
 }
 p {
     color:lightyellow;
@@ -49,6 +50,7 @@ button {
     font-size: 1.2rem;
     margin-top: 2rem;
     color:white;
+    text-transform: uppercase;
 }
 button:hover {
     border: 1px solid white;
