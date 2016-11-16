@@ -43,7 +43,7 @@ select {
 
 }
 .register {
-	color:white;
+	color:dimgray;
 	text-align:center;
 	font-size:3rem;
 	font-family: "Roboto",sans-serif;
@@ -52,10 +52,9 @@ select {
 .check-in {
 	width:100%;
 	text-align:center;
-	color:white;
 	font-size:3rem;
 	font-family: "Roboto",sans-serif;
-	border:1px solid #ed4343;
+	border:none;
 	background:black ;
 	margin-top:4rem;
 }
@@ -65,6 +64,6 @@ select {
  }
 
 a{
-   color: white;
+   color:dimgray;
    text-decoration: none;
 }
