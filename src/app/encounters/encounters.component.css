@@ -1,9 +1,11 @@
 header {
     height: 20vh;
     text-align: center;
+    background:black;
 }
 h1 {
     font-size:3rem;
+    color:#ed4343;
 
 }
 h2 {
@@ -13,6 +15,7 @@ h2 {
 }
 .sub-title {
     font-size:1.5rem;
+    color: dimgray;
 }
 a {
     text-decoration: none;
@@ -20,6 +23,8 @@ a {
 }
 ul {
     overflow:auto;
+    padding-left:2.5rem;
+    background: dimgray;
 }
 .encounter-list {
     height: 400px;
@@ -36,4 +41,7 @@ footer {
     font-size: 3rem;
     text-align:center;
     padding-top:2rem;
+}
+li p {
+    color:white;
 }
