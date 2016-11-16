@@ -1,0 +1,59 @@
+.welcome-page {
+    background:url("../assets/Mars-Nasa-1.jpg");
+    background-size:cover;
+    background-repeat: no-repear;
+    height:100vh;
+}
+h1 {
+    color:darkblue;
+    text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-top: 5rem;
+}
+h2 {
+    color:lightyellow;
+    text-align: center;
+    font-size: 4rem;
+    padding-bottom: 2rem;    
+}
+.sonar-emitter {
+  position: relative;
+  margin: 120px auto;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  /*background-color: red;*/
+  z-index: 0;
+}
+.sonar-emitter::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  content: '';
+  background-color:midnightblue;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/*
+  Animate the pseudo element.
+  NOTE: add browser prefixes where needed.
+*/
+.sonar-emitter::after {
+  animation: sonarWave 2s linear infinite;
+}
+
+@keyframes sonarWave {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

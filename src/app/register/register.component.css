@@ -63,3 +63,8 @@ select {
   color: #ed4343;
   font-size:18px;
  }
+
+a{
+   color: white;
+   text-decoration: none;
+}

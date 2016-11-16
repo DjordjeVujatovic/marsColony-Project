@@ -13,6 +13,8 @@
 	  </div>
 	</fieldset>
 </form>
-<button [disabled] = "!jobSelected" class = "check-in" ng-click="enter($event)">Check-In</button>
+<button [disabled] = "!jobSelected" class = "check-in" ng-click="enter($event)">
+<a routerLink="/Encounters" routerLinkActive="active">Check-In</a>
+	</button>
 
 </section>

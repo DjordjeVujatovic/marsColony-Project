@@ -1,0 +1,39 @@
+header {
+    height: 20vh;
+    text-align: center;
+}
+h1 {
+    font-size:3rem;
+
+}
+h2 {
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 3rem;
+}
+.sub-title {
+    font-size:1.5rem;
+}
+a {
+    text-decoration: none;
+    color:white;
+}
+ul {
+    overflow:auto;
+}
+.encounter-list {
+    height: 400px;
+    overflow:auto;
+}
+footer {
+    background: black;
+    height:30vh;
+}
+
+.button {
+    color:white;
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align:center;
+    padding-top:2rem;
+}
