@@ -1,3 +1,8 @@
-<p>
-  encounters works!
-</p>
+
+
+  <ul>
+   <li *ngFor="let encounter of marsEncounters">
+     <p>{{encounter.date}} - {{encounter.atype}}</p>
+     <p>{{encounter.action}}</p>
+   </li>
+  </ul>

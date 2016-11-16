@@ -18,7 +18,7 @@ NO_JOB_SELECTED = '(none)';
 
 
   constructor(jobService: JobsService) {
-    this.colonist = new NewColonist(null, null this.NO_JOB_SELECTED);
+    this.colonist = new NewColonist(null, null, this.NO_JOB_SELECTED);
 
     jobService.getJobs().subscribe((jobs) => {
     this.marsJobs = jobs;
