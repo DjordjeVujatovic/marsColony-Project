@@ -7,14 +7,14 @@
 		<input type="number" placeholder="Age" [(ngModel)]="colonist.age" name = "age" />
 	  <div class = "custom-select">
 	  	<select [(ngModel)]= "colonist.job_id" name="job_id">
-	  	   <option [value]="NO_JOB_SELECTED">--Select a Job--</option>
+	  	   <option [value]="NO_JOB_SELECTED">Select a Job</option>
 	  	   <option *ngFor="let job of marsJobs" [value]="job.id">{{job.name}}</option>
 	  	</select>
 	  </div>
 	</fieldset>
 </form>
-<div class = "button">
-<button [disabled] = "!jobSelected" class = "check-in" ng-click="enter($event)">
+<div class = "check-in">
+<button [disabled] = "!jobSelected" ng-click="enter($event)">
 		<a routerLink="/Encounters" routerLinkActive="active">Check-In</a>
 </button>
 </div>

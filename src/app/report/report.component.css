@@ -43,14 +43,16 @@ textarea {
     text-align:center;
 }
 button {
-    background: red;
+    background: #ed4343;
     border: none;
     padding: 1rem 6rem;
-    color: white;
     font-size: 1.2rem;
     margin-top: 2rem;
 }
 button:hover {
-    background: darkred;
     border: 1px solid white;
+}
+a {
+    text-decoration: none;
+    color:white;
 }
