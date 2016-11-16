@@ -1,0 +1,18 @@
+<section class = "register-body">
+<p class = "register">Register</p>
+<form>
+	<fieldset>
+		<input type="text" placeholder="Name" [(ngModel)]="colonist.name" name = "name" />
+	
+		<input type="number" placeholder="Age" [(ngModel)]="colonist.age" name = "age" />
+	  <div class = "custom-select">
+	  	<select [(ngModel)]= "colonist.job_id" name="job_id">
+	  	   <option [value]="NO_JOB_SELECTED">--Select a Job--</option>
+	  	   <option *ngFor="let job of marsJobs" [value]="job.id">{{job.name}}</option>
+	  	</select>
+	  </div>
+	</fieldset>
+</form>
+<button [disabled] = "!jobSelected" class = "check-in" ng-click="enter($event)">Check-In</button>
+
+</section>

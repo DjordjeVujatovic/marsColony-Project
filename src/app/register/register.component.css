@@ -1,0 +1,65 @@
+
+.register-body {
+	background: black;
+	height:100vh;
+}
+fieldset{
+	border:none;
+	display:flex;
+	padding-left: 2rem;
+    padding-top: 2rem;
+    padding-right: 2rem;
+}
+input {
+	width:99%;
+	background: black;
+	border:none;
+    border-bottom: 1px solid white;
+    color: white;
+    padding-left: 8px;
+    margin-top: 2rem;
+    line-height:2;
+    padding-top:1.5rem;
+
+
+}
+select {
+	background: black;
+    color: #ed4343;
+    border: none;
+    margin-top: 1rem;
+    width: 100%;
+    -webkit-appearance: none;
+    font-size:18px;
+    padding-left: 8px;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    line-height:2;
+    padding-top:1.5rem;
+}
+.custom-select{
+   display:flex;
+   flex-wrap:wrap;
+
+}
+.register {
+	color:white;
+	text-align:center;
+	font-size:3rem;
+	font-family: "Roboto",sans-serif;
+	padding-top:3rem;
+}
+.check-in {
+	width:100%;
+	text-align:center;
+	color:white;
+	font-size:3rem;
+	font-family: "Roboto",sans-serif;
+	border:1px solid #ed4343;
+	background:black ;
+	margin-top:4rem;
+}
+::-webkit-input-placeholder { 
+  color: #ed4343;
+  font-size:18px;
+ }
