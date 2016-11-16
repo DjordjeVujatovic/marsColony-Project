@@ -1,6 +1,6 @@
 <section class = "register-body">
 <p class = "register">Register</p>
-<form>
+<form #registerForm = "ngForm" class = "register-form" (ngSubmit)="onSubmit($event, registerForm)"> 
 	<fieldset>
 		<input type="text" placeholder="Name" [(ngModel)]="colonist.name" name = "name" />
 	
@@ -12,11 +12,11 @@
 	  	</select>
 	  </div>
 	</fieldset>
-</form>
+
 <div class = "check-in">
-<button [disabled] = "!jobSelected" ng-click="enter($event)">
-		<a routerLink="/Encounters" routerLinkActive="active">Check-In</a>
-</button>
+	<button>Check In
+	</button>
 </div>
+</form>
 
 </section>

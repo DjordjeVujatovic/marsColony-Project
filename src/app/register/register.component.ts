@@ -30,6 +30,6 @@ NO_JOB_SELECTED = '(none)';
 
 get jobSelected(){
 	return this.colonist.job_id !== this.NO_JOB_SELECTED;
-}
+  }
 
 }

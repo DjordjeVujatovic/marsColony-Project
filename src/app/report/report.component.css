@@ -48,11 +48,8 @@ button {
     padding: 1rem 6rem;
     font-size: 1.2rem;
     margin-top: 2rem;
+    color:white;
 }
 button:hover {
     border: 1px solid white;
-}
-a {
-    text-decoration: none;
-    color:white;
 }

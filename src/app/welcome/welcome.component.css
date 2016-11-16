@@ -1,21 +1,33 @@
 .welcome-page {
-    background:url("../assets/Mars-Nasa-1.jpg");
-    background-size:cover;
+    background:url("../assets/sweet mars pic.jpg");
+    background-size:cover, contain;
     background-repeat: no-repear;
     height:100vh;
 }
+.header-footer {
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 100vh;
+}
 h1 {
-    color:darkblue;
+    color:darkorange;
     text-align: center;
     font-size: 5rem;
     text-transform: uppercase;
-    padding-top: 5rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    justify-content: flex-start;
 }
 h2 {
     color:lightyellow;
     text-align: center;
-    font-size: 4rem;
-    padding-bottom: 2rem;    
+    font-size: 3rem;
+    padding-right:2rem; 
+    width: 100%;
+    text-align: end;
+    text-transform: uppercase;
+    /* height: 100%; */  
 }
 .sonar-emitter {
   position: relative;
@@ -34,7 +46,7 @@ h2 {
   height: 100%;
   border-radius: 50%;
   content: '';
-  background-color:midnightblue;
+  background-color: darkorange;
   z-index: -1;
   pointer-events: none;
   opacity: 0;
@@ -56,4 +68,7 @@ h2 {
     transform: scale(2.5);
     opacity: 0;
   }
+}
+.sonar-wrapper {
+  flex-basis: 100%;
 }
