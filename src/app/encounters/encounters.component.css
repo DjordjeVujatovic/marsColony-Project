@@ -5,7 +5,7 @@ header {
 }
 h1 {
     font-size:3rem;
-    color:#ed4343;
+    color:darkorange;
 
 }
 h2 {
@@ -15,16 +15,16 @@ h2 {
 }
 .sub-title {
     font-size:1.5rem;
-    color: dimgray;
+    color: white;
 }
 a {
     text-decoration: none;
-    color:white;
+    color:darkorange;
 }
 ul {
     overflow:auto;
     padding-left:2.5rem;
-    background: dimgray;
+    background: darkgrey;
 }
 .encounter-list {
     height: 400px;
@@ -36,12 +36,11 @@ footer {
 }
 
 .button {
-    color:white;
     margin: 0 auto;
     font-size: 3rem;
     text-align:center;
     padding-top:2rem;
 }
 li p {
-    color:white;
+    color:lightyellow;
 }

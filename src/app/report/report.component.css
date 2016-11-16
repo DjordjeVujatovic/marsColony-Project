@@ -8,16 +8,16 @@ header {
     text-align: center;
 }
 h1{
-    color:dimgray;
+    color:darkorange;
     font-size:2rem;
 }
 p {
-    color:dimgray;
+    color:lightyellow;
     font-size:1.4rem;
 }
 select {
 	background: black;
-    color: #ed4343;
+    color: darkorange;
     border: none;
     margin-top: 1rem;
     width: 100%;
@@ -43,7 +43,7 @@ textarea {
     text-align:center;
 }
 button {
-    background: #ed4343;
+    background: darkorange;
     border: none;
     padding: 1rem 6rem;
     font-size: 1.2rem;
