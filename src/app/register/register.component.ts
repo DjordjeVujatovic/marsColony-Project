@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { NewColonist, Job } from '../models';
 import  JobsService from '../services/jobs.service';
-
+import { cantBe } from '../shared/validators';
 
 
 
@@ -29,17 +29,12 @@ NO_JOB_SELECTED = '(none)';
     });
   }
 
-cantBe(value:string): ValidatorFn {
-  return(control: AbstractControl): {[key: string]: any} => {
-    return control.value === value ? {'cant be value': {value}} :null;
-  };
-}
 
   ngOnInit() {
   this.registerForm = new FormGroup({
     name: new FormControl('',[Validators.required]),
     age: new FormControl('', [Validators.required]),
-    job_id: new FormControl('(none)', [this.cantBe(this.NO_JOB_SELECTED)])
+    job_id: new FormControl('(none)', [cantBe(this.NO_JOB_SELECTED)])
   });
 }
 

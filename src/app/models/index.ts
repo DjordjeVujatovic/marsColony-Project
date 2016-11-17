@@ -1,11 +1,20 @@
-export class Encounter {
+export class NewEncounter {
 	constructor(
-	 public id: number,
 	 public date: string,
 	 public colonist_id: number,
 	 public atype: string,
 	 public action: string
 	){}
+}
+
+export interface Encounter {
+	constructor (
+		id: number,
+		date: string,
+		colonist_id: number,
+		atype: string,
+		action: string
+	)
 }
 
 export class NewColonist {
