@@ -13,7 +13,7 @@ h1{
     text-transform: uppercase;
 }
 p {
-    color:lightyellow;
+    color:white;
     font-size:1.4rem;
 }
 select {
@@ -54,4 +54,7 @@ button {
 }
 button:hover {
     border: 1px solid white;
+}
+textarea {
+    background: darkgray;
 }

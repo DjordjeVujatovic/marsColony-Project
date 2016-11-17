@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
 import { NewColonist, Job } from '../models';
 import  JobsService from '../services/jobs.service';
+
+
+
 
 @Component({
   selector: 'app-register',
@@ -13,23 +16,30 @@ export class RegisterComponent implements OnInit {
 
 colonist: NewColonist;
 marsJobs: Job[];
+registerForm: FormGroup;
 
 NO_JOB_SELECTED = '(none)';
 
 
   constructor(jobService: JobsService) {
-    this.colonist = new NewColonist(null, null, this.NO_JOB_SELECTED);
+
 
     jobService.getJobs().subscribe((jobs) => {
     this.marsJobs = jobs;
     });
   }
 
+cantBe(value:string): ValidatorFn {
+  return(control: AbstractControl): {[key: string]: any} => {
+    return control.value === value ? {'cant be value': {value}} :null;
+  };
+}
+
   ngOnInit() {
+  this.registerForm = new FormGroup({
+    name: new FormControl('',[Validators.required]),
+    age: new FormControl('', [Validators.required]),
+    job_id: new FormControl('(none)', [this.cantBe(this.NO_JOB_SELECTED)])
+  });
   }
-
-get jobSelected(){
-	return this.colonist.job_id !== this.NO_JOB_SELECTED;
-  }
-
 }

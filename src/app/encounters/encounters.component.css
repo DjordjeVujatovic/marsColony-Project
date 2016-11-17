@@ -24,7 +24,7 @@ a {
 }
 ul {
     overflow:auto;
-    padding-left:2.5rem;
+    padding-left:1.5rem;
     background: darkgrey;
 }
 .encounter-list {
@@ -44,5 +44,5 @@ footer {
     text-transform: uppercase;
 }
 li p {
-    color:lightyellow;
+    color:black;
 }
