@@ -41,5 +41,18 @@ cantBe(value:string): ValidatorFn {
     age: new FormControl('', [Validators.required]),
     job_id: new FormControl('(none)', [this.cantBe(this.NO_JOB_SELECTED)])
   });
+}
+
+onSubmit(event) {
+  event.preventDefault();
+  if (this.registerForm.invalid) {
+    //The Form is invalid
+  } else {
+    const name = this.registerForm.get('name').value;
+    const age = this.registerForm.get('age').value;
+    const job_id = this.registerForm.get('job_id').value;
+
+    console.log('Ok lets register this new colonist:', new NewColonist(name, age, job_id));
   }
+ }
 }
