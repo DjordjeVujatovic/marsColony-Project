@@ -1,0 +1,41 @@
+.black-hole {
+  background:url("../assets/blackHole.jpg");
+  background-size:cover, contain;
+  background-repeat: no-repeat;
+  height:100vh;
+}
+.page-header {
+    width:50vw;
+}
+h2{
+  font-size: 2rem;
+  color: white;
+  text-transform: uppercase;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  color: darkorange;
+}
+h3 {
+  color: white;
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  color: lightyellow;
+  border-bottom:1px solid darkorange;
+  padding-bottom:1rem;
+  padding-top:1rem;
+}
+h4 {
+    color: lightyellow;
+    font-size:1.5rem;
+    padding-top:1rem;
+}
+.question {
+    color: darkorange;
+    font-size:1.5rem;
+    padding-left:0rem;
+}
+.not-found-paragraph {
+    padding-left:1rem;
+    width: 50vw;
+}
