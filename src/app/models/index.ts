@@ -8,13 +8,11 @@ export class NewEncounter {
 }
 
 export interface Encounter {
-	constructor (
-		id: number,
-		date: string,
-		colonist_id: number,
-		atype: string,
-		action: string
-	)
+		id: number;
+		date: string;
+		colonist_id: number;
+		atype: string;
+		action: string;
 }
 
 export class NewColonist {

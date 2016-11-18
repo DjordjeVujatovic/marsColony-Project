@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import AliensService from '../services/aliens.service';
 import EncountersService from '../services/encounters.service';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
-
+import { Router } from '@angular/router'
 import { Alien, NewEncounter, Encounter } from '../models';
 import { cantBe } from '../shared/validators';
 
@@ -19,7 +19,8 @@ export class ReportComponent implements OnInit {
   NO_ALIEN_SELECTED= '(none)';
 
   constructor(private aliensService: AliensService,
-              private encountersService: EncountersService){
+              private encountersService: EncountersService,
+              private router: Router){
 
                 aliensService.getAliens().subscribe((aliens)=>{
                   this.aliensList = aliens;
@@ -32,19 +33,25 @@ export class ReportComponent implements OnInit {
       action: new FormControl('', [Validators.required, Validators.maxLength(450)])
     });
   }
- onSubmit(event) {
-    event.preventDefault();
-  if (this.reportForm.invalid) {
-    //The Form is invalid
-    console.log(this.reportForm.invalid);
-  } else {
-    const date = this.reportForm.get('date').value;
-    const atype = this.reportForm.get('atype').value;
-    const action = this.reportForm.get('action').value;
-    const colonist_id = this.reportForm.get('colonist_id').value;
-  
 
-    console.log('Ok lets register this new colonist:', new NewEncounter(date, atype, action, colonist_id));
-  }
- }
+private getDate(){
+  const date = new Date();
+  return `${date.getFullYear()}-${date.getMonth() +1}-${date.getDate()}`;
 }
+
+onSubmit(event) {
+  event.preventDefault();
+  const date = this.getDate();
+  const atype = this.reportForm.get('atype').value;
+  const action = this.reportForm.get('action').value;
+  const encounter = new NewEncounter(date, 4, atype, action );
+
+  if (this.reportForm.valid) {
+  this.encountersService.submitEncounter(encounter).subscribe((enc)=>{
+    this.router.navigate(['/Encounters']);
+    console.log('success');
+  },(err)=>{
+    console.log('error');
+  });
+}
+}}

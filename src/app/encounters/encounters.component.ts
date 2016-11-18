@@ -16,12 +16,18 @@ export class EncountersComponent implements OnInit {
   constructor(encounterService: EncountersService) { 
 
     encounterService.getEncounters().subscribe((encounters)=>{
-      this.marsEncounters = encounters;
-    });
+      this.marsEncounters = encounters.sort((a, b) => {
+                                     return b.id - a.id;
+                                     })
+                                     .splice(0,100);
+                              }, (err) => {
+                                  console.log(err);
+   });
   }
   ngOnInit() {
   }
 
 }
+
 
 
