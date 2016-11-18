@@ -5,7 +5,7 @@ import {Encounter} from '../models';
 @Component({
   selector: 'app-encounters',
   templateUrl: './encounters.component.html',
-  styleUrls: ['./encounters.component.css'],
+  styleUrls: ['./encounters.component.scss'],
   providers: [EncountersService]
 })
 

@@ -6,7 +6,7 @@
 }
 .page-header {
     width:50vw;
-}
+
 h2{
   font-size: 2rem;
   color: white;
@@ -18,13 +18,18 @@ h2{
 }
 h3 {
   color: white;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   padding-left: 1rem;
   color: lightyellow;
   border-bottom:1px solid darkorange;
   padding-bottom:1rem;
   padding-top:1rem;
+  text-transform: uppercase;
+ }
 }
+.not-found-paragraph {
+   padding-left:1rem;
+   width:50vw; 
 h4 {
     color: lightyellow;
     font-size:1.5rem;
@@ -34,8 +39,7 @@ h4 {
     color: darkorange;
     font-size:1.5rem;
     padding-left:0rem;
-}
-.not-found-paragraph {
-    padding-left:1rem;
-    width: 50vw;
+    text-transform: uppercase;
+    padding-top:1rem;
+ }
 }
