@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import AliensService from '../services/aliens.service';
 import EncountersService from '../services/encounters.service';
 import { FormGroup, FormControl, FormBuilder, Validators,ValidatorFn, AbstractControl } from '@angular/forms';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 import { Alien, NewEncounter, Encounter } from '../models';
 import { cantBe } from '../shared/validators';
 
@@ -44,7 +44,8 @@ onSubmit(event) {
   const date = this.getDate();
   const atype = this.reportForm.get('atype').value;
   const action = this.reportForm.get('action').value;
-  const encounter = new NewEncounter(date, 4, atype, action );
+  const colonist_id = localStorage.getItem('colonist_id');
+  const encounter = new NewEncounter(date,colonist_id, atype, action );
 
   if (this.reportForm.valid) {
   this.encountersService.submitEncounter(encounter).subscribe((enc)=>{

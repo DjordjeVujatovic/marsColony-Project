@@ -1,7 +1,7 @@
 export class NewEncounter {
 	constructor(
 	 public date: string,
-	 public colonist_id: number,
+	 public colonist_id: string,
 	 public atype: string,
 	 public action: string
 	){}
@@ -23,7 +23,7 @@ export class NewColonist {
 	){}
 }
 
-interface colonist {
+export interface Colonist {
      name: string;
 	 id: number;
 	 age: number;
