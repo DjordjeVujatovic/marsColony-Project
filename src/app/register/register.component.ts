@@ -20,6 +20,7 @@ colonist: NewColonist;
 marsJobs: Job[];
 marsColonist: Colonist;
 registerForm: FormGroup;
+blinkOrange: boolean;
 
 NO_JOB_SELECTED = '(none)';
 
@@ -60,7 +61,9 @@ onSubmit(event) {
     }, (err)=> {
       console.log(err);
     });
-
+  }
+  else(this.registerForm.invalid);{
+    this.blinkOrange=true;
   }
  }
 }

@@ -77,3 +77,15 @@ button {
   color: darkorange;
   font-size: 18px;
 }
+@keyframes blink {
+   50% {
+       border: 1px solid darkorange ;
+       -moz-box-shadow: 0 0 5px 5px darkorange  ;
+       -webkit-box-shadow: 0 0 5px 5px darkorange ;
+       box-shadow: 0 0 5px 5px darkorange  ;
+   }
+}
+
+.invalidForm .ng-invalid {
+   animation: blink .5s step-end infinite alternate;
+}
