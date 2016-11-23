@@ -1,3 +1,4 @@
+![Alt text](/Mars-Colony-Screenshot.png)
 # Project 5 - Mars Colony Project
 
 ## Summary
