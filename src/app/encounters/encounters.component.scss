@@ -54,13 +54,9 @@ footer {
     align-self: center;
     padding:0;
 
-    &:hover{
-      border:1px solid white;
-      background-color:darkorange;
 
-      a{
-        color:white;
-      }
+    &:hover a{
+      color:orange;
     
     }
   }
