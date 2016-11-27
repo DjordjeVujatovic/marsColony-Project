@@ -1,7 +1,12 @@
+body{
+  background-color:black;
+}
 header {
-  height: 20vh;
+  height: auto;
   text-align: center;
   background: black;
+  padding-bottom:2rem;
+
 
 h1 {
   font-size: 3rem;
@@ -39,6 +44,24 @@ li p {
 
 footer {
   background: black;
-  height: 30vh;
-}
+  height: 40vh; 
+  display:flex; 
+  h2{
+    text-align: center;
+    width:100%;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    align-self: center;
+    padding:0;
 
+    &:hover{
+      border:1px solid white;
+      background-color:darkorange;
+
+      a{
+        color:white;
+      }
+    
+    }
+  }
+}
